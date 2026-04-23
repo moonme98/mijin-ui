@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCourse</title>
+
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/course.css" />
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="content-wrapper">
+  <h1 class="page-title">코스 목록</h1>
+
+  <div class="list-header">
+    <div class="add-course-btn">
+     + 여행코스 등록
+    </div>
+  </div>
+  
+  <section class="product-list">
+
+    <!-- 코스 1 -->
+    <article class="product-item">
+      <img class="product-img" src="./images/trip20.jpg" alt="여행 이미지" />
+
+      <div class="product-info">
+        <div class="info-left">
+          <div class="product-title">
+            전통 한옥 여행
+          </div>
+
+          <div class="product-genre">
+            2026-04-01 ~ 2026-04-03
+          </div>
+
+          <div class="product-description">
+            한옥마을에서 보내는 하루하루
+          </div>
+
+          <div class="product-price">#한옥</div>
+          <div class="product-price">#맛집</div>
+          <div class="product-price">#인생샷</div>
+        </div>
+
+        <div class="product-actions">
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="1"/>
+            <input type="image" src="./images/edit.png" class="action-icon"/>
+          </form>
+
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="1"/>
+            <input type="image" src="./images/delete.png" class="action-icon"/>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <!-- 코스 2 -->
+    <article class="product-item">
+      <img class="product-img" src="./images/k-food07.jpg" alt="여행 이미지" />
+
+      <div class="product-info">
+        <div class="info-left">
+          <div class="product-title">
+            맛집 탐방
+          </div>
+
+          <div class="product-genre">
+            2026-05-10 ~ 2026-05-12
+          </div>
+
+          <div class="product-description">
+            먹고 싶은 음식들
+          </div>
+
+          <div class="product-price">#K-FOOD</div>
+          <div class="product-price">#또간집</div>
+        </div>
+
+        <div class="product-actions">
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="2"/>
+            <input type="image" src="./images/edit.png" class="action-icon"/>
+          </form>
+
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="2"/>
+            <input type="image" src="./images/delete.png" class="action-icon"/>
+          </form>
+        </div>
+      </div>
+    </article>
+
+    <!-- 코스 3 -->
+    <article class="product-item">
+      <img class="product-img" src="./images/k-pop01.jpg" alt="여행 이미지" />
+
+      <div class="product-info">
+        <div class="info-left">
+          <div class="product-title">
+            콘서트 모음
+          </div>
+
+          <div class="product-genre">
+            2026-05-10 ~ 2026-05-12
+          </div>
+
+          <div class="product-description">
+            가고 싶은 콘서트
+          </div>
+
+          <div class="product-price">#콘서트</div>
+          <div class="product-price">#K-POP</div>
+        </div>
+
+        <div class="product-actions">
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="2"/>
+            <input type="image" src="./images/edit.png" class="action-icon"/>
+          </form>
+
+          <form method="post" action="#">
+            <input type="hidden" name="courseId" value="2"/>
+            <input type="image" src="./images/delete.png" class="action-icon"/>
+          </form>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</div>
+
+<div id="footer"></div>
+
+<script src="./js/include.js"></script>
+
+</body>
+</html>

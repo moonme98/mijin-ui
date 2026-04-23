@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripInfo</title>
+
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/trip.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<div class="content-wrapper">
+
+  <h1 class="page-title">
+    <span id="titleText">#전체</span>
+  </h1>
+
+  <div class="page-sub">
+
+    <div class="count">
+      총 <span class="count-num" id="countNum">0</span>건
+    </div>
+
+    <div class="filter-area">
+
+      <!-- 카테고리 -->
+      <div class="categories">
+        <a href="#" data-filter="all" class="active">전체</a> |
+        <a href="#" data-filter="trip">여행지</a> |
+        <a href="#" data-filter="kpop">K-POP</a> |
+        <a href="#" data-filter="kfood">K-FOOD</a>
+      </div>
+
+      <!-- 검색 -->
+      <div class="search-box">
+        <form>
+          <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+          <button type="submit" class="search-btn"></button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 카드 리스트 -->
+  <div class="grid">
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip20.jpg">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">한옥 체험</div>
+        <div class="location">전주</div>
+        <div class="desc">전통 한옥에서 숙박하며 한국 문화를 체험</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip10.jpg">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">시티 투어</div>
+        <div class="location">서울</div>
+        <div class="desc">도심 명소를 하루에 즐기는 효율적인 여행 코스</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kfood">
+        <img src="./images/k-food05.jpg">
+        <div class="info-box">
+        <span class="category">#K-FOOD</span>
+        <div class="title">미식 여행</div>
+        <div class="location">한국</div>
+        <div class="desc">함께 즐기는 한국의 대표 음식 탐방</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip3.jpg">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">서울 축제</div>
+        <div class="location">서울</div>
+        <div class="desc">계절마다 열리는 다양한 문화 축제와 야시장</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kpop">
+        <img src="./images/k-pop06.gif">
+        <div class="info-box">
+        <span class="category">#K-POP</span>
+        <div class="title">아이돌 투어</div>
+        <div class="location">서울</div>
+        <div class="desc">연습생 거리와 엔터테인먼트 방문 체험</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip19.gif">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">제주 여행</div>
+        <div class="location">제주도</div>
+        <div class="desc">바다와 감성 카페를 즐기는 힐링 여행</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kfood">
+        <img src="./images/k-food09.jpg">
+        <div class="info-box">
+        <span class="category">#K-FOOD</span>
+        <div class="title">떡볶이 투어</div>
+        <div class="location">신당동</div>
+        <div class="desc">매콤달콤한 떡볶이 맛집 탐방</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip18.jpg">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">부산 전시회 여행</div>
+        <div class="location">부산</div>
+        <div class="desc">문화가 살아있는 여행</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kpop">
+        <img src="./images/k-pop01.jpg">
+        <div class="info-box">
+        <span class="category">#K-POP</span>
+        <div class="title">콘서트 투어</div>
+        <div class="location">서울</div>
+        <div class="desc">대형 공연장에서 즐기는 K-POP 라이브</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kpop">
+        <img src="./images/k-pop02.jpg">
+        <div class="info-box">
+        <span class="category">#K-POP</span>
+        <div class="title">IU 콘서트</div>
+        <div class="location">서울</div>
+        <div class="desc">감성적인 라이브 공연과 팬들과의 특별한 시간</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kfood">
+        <img src="./images/k-food08.jpg">
+        <div class="info-box">
+        <span class="category">#K-FOOD</span>
+        <div class="title">한식 탐방</div>
+        <div class="location">서울</div>
+        <div class="desc">비빔밥, 불고기 등 대표 한식 메뉴 체험</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="trip">
+        <img src="./images/trip21.jpg">
+        <div class="info-box">
+        <span class="category">#여행지</span>
+        <div class="title">강릉 여행</div>
+        <div class="location">강릉</div>
+        <div class="desc">바다와 함께 노을 보기</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kfood">
+        <img src="./images/k-food06.jpg">
+        <div class="info-box">
+        <span class="category">#K-FOOD</span>
+        <div class="title">한우곰탕</div>
+        <div class="location">서울</div>
+        <div class="desc">깊고 진한 국물의 전통 한식 요리</div>
+        </div>
+    </div>
+
+    <div class="card" data-category="kpop">
+        <img src="./images/k-pop09.jpg">
+        <div class="info-box">
+        <span class="category">#K-POP</span>
+        <div class="title">태연 콘서트</div>
+        <div class="location">서울</div>
+        <div class="desc">감미로운 보컬과 감성 무대</div>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- 페이징 -->
+  <div class="pagination"></div>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="./js/main.js"></script>
+<script src="./js/include.js"></script>
+
+</body>
+</html>
