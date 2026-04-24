@@ -1,3 +1,52 @@
+/* HAMBURGER */
+function initHeader() {
+
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const closeBtn = document.querySelector(".menu-close");
+
+    if (!hamburger || !mobileMenu) return;
+
+    hamburger.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+
+    // 아코디언
+    const items = mobileMenu.querySelectorAll(".mobile-item");
+
+    items.forEach(item => {
+        const title = item.querySelector(".mobile-title");
+
+        title.addEventListener("click", () => {
+
+            const isActive = item.classList.contains("active");
+
+            items.forEach(i => i.classList.remove("active"));
+
+            if (!isActive) {
+                item.classList.add("active");
+            }
+        });
+    });
+
+    // 바깥 클릭 닫기
+    document.addEventListener("click", (e) => {
+
+        const isMenu = e.target.closest(".mobile-menu");
+        const isHamburger = e.target.closest(".hamburger");
+
+        if (!isMenu && !isHamburger) {
+            mobileMenu.classList.remove("active");
+        }
+    });
+}
+
+
+
 /* HERO 슬라이드 */
 const slides = document.querySelectorAll('.slide');
 const current = document.querySelector('.current');
@@ -23,7 +72,6 @@ if (slides.length > 0 && current && total) {
 
     }, 3000);
 }
-
 
 
 /* Travel Style (드래그) */

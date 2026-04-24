@@ -216,3 +216,177 @@ body {font-family:'Noto Sans KR';}
     font-weight: 700;
 }
 
+
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .section {
+        margin: 100px 0;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    /* HERO */
+    .overlay {
+        left: 40px;
+    }
+
+    .overlay h1 {
+        font-size: 48px;
+    }
+
+    /* 인기코스 */
+    .course-list {
+        gap: 16px;
+    }
+
+    .img-box img {
+        height: 260px;
+    }
+
+    /* 스타일 */
+    .style-card {
+        flex: 0 0 320px;
+    }
+
+    .style-slider {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        margin: 80px 0;
+    }
+
+    .section h2 {
+        font-size: 24px;
+    }
+
+    /* HERO */
+    .main-visual {
+        height: 80vh;
+    }
+
+    .overlay {
+        left: 20px;
+        top: 65%;
+    }
+
+    .overlay h1 {
+        font-size: 32px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* 인기코스 */
+    .course-list {
+        flex-direction: column;
+    }
+
+    .img-box img {
+        height: 220px;
+    }
+
+    /* 배너 */
+    .banner.full {
+        height: 220px;
+    }
+
+    /* 스타일 */
+    .style-card {
+        flex: 0 0 260px;
+    }
+
+    .style-card img {
+        height: 180px;
+    }
+
+    .text .bottom {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .section {
+        margin: 60px 0;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    /* HERO */
+    .main-visual {
+        height: 70vh;
+    }
+
+    .overlay {
+        left: 16px;
+    }
+
+    .overlay h1 {
+        font-size: 24px;
+    }
+
+    .overlay p {
+        font-size: 13px;
+    }
+
+    .hero-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .slide-count {
+        right: 16px;
+        font-size: 12px;
+    }
+
+    /* 인기코스 */
+    .img-box img {
+        height: 180px;
+    }
+
+    /* 배너 */
+    .banner.full {
+        height: 180px;
+    }
+
+    /* 스타일 */
+    .style-card {
+        flex: 0 0 220px;
+    }
+
+    .style-card img {
+        height: 150px;
+    }
+
+    .text {
+        left: 14px;
+        bottom: 14px;
+    }
+}
+
+

@@ -55,6 +55,7 @@
 }
 
 .product-item {
+	position: relative;
 	display: flex;
 	background: rgba(255, 255, 255, 0.4);;
 	backdrop-filter: blur(12px);
@@ -133,15 +134,18 @@
 }
 
 .product-actions {
-	display: flex;
-	gap: 10px;
-	align-items: center;
-	margin-left: 20px;
+	position: absolute;
+    top: 25px;
+    right: 20px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-left: 0;
 }
 
 .action-icon {
-	width: 24px;
-	height: 24px;
+	width: 22px;
+	height: 22px;
 	cursor: pointer;
 	transition: transform 0.2s ease;
 }
@@ -149,3 +153,126 @@
 .action-icon:hover {
 	transform: translateY(-3px);
 }
+
+
+@media (max-width: 1024px) {
+
+    .page-title,
+    .list-header,
+    .product-list {
+        max-width: 95%;
+    }
+
+    .product-item {
+        gap: 16px;
+    }
+
+    .product-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-title {
+        font-size: 1.2rem;
+    }
+
+    .product-genre {
+        font-size: 0.95rem;
+    }
+
+    .product-description {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .product-item {
+        flex-direction: column;
+    }
+
+    .product-img {
+        width: 100%;
+        height: 220px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .product-info {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+    }
+
+	.product-actions {
+        top: 255px;
+        right: 15px;
+        gap: 6px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .page-title {
+        padding: 0 16px;
+        font-size: 20px;
+    }
+
+    .list-header {
+        padding: 0 16px;
+    }
+
+    .add-course-btn {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .product-list {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .product-item {
+        border-radius: 16px;
+    }
+
+    .product-img {
+        height: 180px;
+    }
+
+    .product-title {
+        font-size: 1.1rem;
+    }
+
+    .product-genre {
+        font-size: 0.85rem;
+    }
+
+    .product-description {
+        font-size: 0.85rem;
+    }
+
+    .product-price {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .product-actions {
+        top: 215px;
+        right: 15px;
+        gap: 6px;
+    }
+
+	.action-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+

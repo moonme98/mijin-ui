@@ -1,17 +1,10 @@
 @charset "UTF-8";
 
-html, body {
-	height: 100%;
-	margin: 0;
-	overflow: hidden;
-}
-
 .login-container {
-	height: 100vh;
+	min-height: calc(100vh - 90px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transform: translateY(-40px);
 }
 
 .login-card {
@@ -83,4 +76,38 @@ html, body {
 
 .signup-text a:hover {
 	text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+
+    .login-container {
+        padding: 0 16px;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .login-card input {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .login-card button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-text a {
+        font-size: 0.75rem;
+    }
+
 }

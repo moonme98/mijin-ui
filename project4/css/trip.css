@@ -193,14 +193,156 @@
 }
 
 
-@media (max-width: 900px) {
-	.grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
+@media (max-width: 1024px) {
+
+    .page-title,
+    .page-sub,
+    .grid {
+        max-width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 24px;
+    }
+
+    .card img {
+        height: 240px;
+    }
+
 }
 
-@media (max-width: 600px) {
-	.grid {
-		grid-template-columns: 1fr;
+@media (max-width: 768px) {
+
+    .page-title {
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 0 16px;
+    }
+
+    .page-sub {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 0 16px;
+    }
+
+    .page-sub .filter-area {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+	.count {
+		margin: 0 5px;
 	}
+
+    .categories {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        width: 160px;
+    }
+
+    .search-box input {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .info-box .title {
+        font-size: 14px;
+    }
+
+    .info-box .desc {
+        font-size: 11px;
+    }
+
 }
+
+@media (max-width: 480px) {
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    .page-sub {
+        font-size: 13px;
+    }
+
+	.page-sub .filter-area {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .categories {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 13px;
+    }
+
+    .categories a {
+        margin: 0;
+    }
+
+    .search-box {
+        width: 100%;
+		margin-top: 5px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .info-box {
+        padding: 10px;
+    }
+
+    .info-box .title {
+        font-size: 13px;
+    }
+
+    .info-box .location {
+        font-size: 12px;
+    }
+
+    .info-box .desc {
+        font-size: 11px;
+    }
+
+    .info-box .category {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .pagination {
+        margin-top: 40px;
+        gap: 6px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+}
+

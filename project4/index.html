@@ -159,5 +159,15 @@
 <script src="./js/main.js"></script>
 <script src="./js/include.js"></script>
 
+<script>
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+
+    initHeader();
+  });
+</script>
+
 </body>
 </html>
