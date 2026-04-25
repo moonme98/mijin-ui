@@ -65,17 +65,21 @@
 }
 
 .signup-text {
-	margin-top: 1.2rem;
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    color: #666;
 }
 
 .signup-text a {
-	font-size: 0.8rem;
-	color: #555;
-	text-decoration: none;
+    margin-left: 6px;
+    font-weight: 600;
+    color: #99c8fd;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .signup-text a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 
@@ -83,12 +87,6 @@
 
     .login-container {
         padding: 0 16px;
-    }
-
-    .login-card {
-        width: 100%;
-        padding: 2rem 1.5rem;
-        border-radius: 16px;
     }
 
     .login-card h2 {

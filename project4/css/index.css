@@ -19,7 +19,7 @@ body {font-family:'Noto Sans KR';}
 
 /* HERO */
 .main-visual {
-    height:calc(100vh - 90px);
+    height:calc(100vh - 87px);
     position:relative;
 }
 .main-visual::after {

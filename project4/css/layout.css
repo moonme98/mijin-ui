@@ -13,6 +13,7 @@ body {
     z-index: 1000;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .header-inner {
@@ -100,7 +101,7 @@ body {
 /* DROPDOWN */
 .mega-dropdown {
     position: absolute;
-    top: 70px;
+    top: 87px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -414,7 +415,7 @@ body {
 @media (max-width: 1024px) {
 
     body {
-        padding-top: 75px;
+        padding-top: 77px;
     }
 
     .header-inner {
@@ -461,7 +462,7 @@ body {
 @media (max-width: 768px) {
 
     body {
-        padding-top: 65px;
+        padding-top: 73px;
     }
 
     .header-inner {
@@ -540,6 +541,10 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    body {
+        padding-top: 65px;
+    }
 
     .header-inner {
         padding: 12px 14px;
