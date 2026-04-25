@@ -369,7 +369,7 @@ a {
 }
 .portfolio .main_box .content .project .piece span {
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.7;
     color: #777;
@@ -403,7 +403,7 @@ a {
 }
 .portfolio .overview span {
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: #777;
 }
