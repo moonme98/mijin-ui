@@ -106,6 +106,7 @@ const cards = document.querySelectorAll(".card");
 const filters = document.querySelectorAll(".categories a");
 const pagination = document.querySelector(".pagination");
 const countNum = document.querySelector(".count-num");
+const titleText = document.getElementById("titleText");
 
 if (cards.length > 0 && pagination) {
 
@@ -122,6 +123,10 @@ if (cards.length > 0 && pagination) {
 
             currentFilter = btn.dataset.filter;
             currentPage = 1;
+
+            if (titleText) {
+                titleText.textContent = "#" + btn.textContent.trim();
+            }
 
             render();
         });
@@ -187,3 +192,91 @@ if (cards.length > 0 && pagination) {
 
     render();
 }
+
+
+
+/* COMMUNITY - 필터 + 페이지네이션 */
+function initCommunity() {
+
+    const cards = document.querySelectorAll(".post-card");
+    const filters = document.querySelectorAll(".categories a");
+    const pagination = document.querySelector(".pagination");
+
+    if (cards.length === 0 || !pagination) return;
+
+    let currentFilter = "all";
+    let currentPage = 1;
+    const itemsPerPage = 6;
+
+    /* 카테고리 필터 */
+    filters.forEach(btn => {
+        btn.addEventListener("click", e => {
+            e.preventDefault();
+
+            filters.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            currentFilter = btn.dataset.filter;
+            currentPage = 1;
+
+            render();
+        });
+    });
+
+    function getFilteredCards() {
+        if (currentFilter === "all") return [...cards];
+
+        return [...cards].filter(card =>
+            card.dataset.category === currentFilter
+        );
+    }
+
+    function render() {
+        const filtered = getFilteredCards();
+
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        cards.forEach(card => card.style.display = "none");
+
+        filtered.slice(start, end).forEach(card => {
+            card.style.display = "block";
+        });
+
+        renderPagination(filtered.length);
+    }
+
+    function renderPagination(total) {
+        const totalPages = Math.ceil(total / itemsPerPage);
+        let html = "";
+
+        if (currentPage > 1) {
+            html += `<a href="#" class="prev">«</a>`;
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+            html += `<a href="#" class="${i === currentPage ? "active" : ""}">${i}</a>`;
+        }
+
+        if (currentPage < totalPages) {
+            html += `<a href="#" class="next">»</a>`;
+        }
+
+        pagination.innerHTML = html;
+
+        pagination.querySelectorAll("a").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+
+                if (btn.classList.contains("prev")) currentPage--;
+                else if (btn.classList.contains("next")) currentPage++;
+                else currentPage = parseInt(btn.textContent);
+
+                render();
+            });
+        });
+    }
+
+    render();
+}
+

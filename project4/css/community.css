@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+.community-container {
+    max-width: 1200px;
+    margin: 30px auto 120px;
+    padding: 0 40px;
+}
+
+.page-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #777;
+    font-size: 14px;
+}
+
+.community-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+}
+
+.categories a {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.categories a.active {
+    background: #99c8fd;
+    color: #fff;
+}
+
+.categories a:hover {
+    background: #eaeaea;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding: 8px 36px 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-icon::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    bottom: -1px;
+    width: 6px;
+    height: 2px;
+    background: #999;
+    transform: rotate(45deg);
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.post-card {
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: all 0.25s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.post-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.category {
+    font-size: 12px;
+    color: #99c8fd;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.post-card .title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.post-bottom {
+    font-size: 13px;
+    color: #999;
+}
+
+.community-bottom {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.write-btn {
+    background: #99c8fd;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.write-btn:hover {
+    background: #7fb6f5;
+}
+
+.pagination {
+    display: flex;
+    gap: 6px;
+}
+
+.pagination a {
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #666;
+    font-size: 13px;
+}
+
+.pagination a.active {
+    background: #000;
+    color: #fff;
+}
+
+.pagination a:hover {
+    background: #eee;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .community-container {
+        padding: 0 30px;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .community-top {
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .community-top {
+        gap: 10px;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .search-box input {
+        width: 120px;
+    }
+
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .community-container {
+        padding: 0 16px;
+        margin: 20px auto 80px;
+    }
+
+    .page-title h2 {
+        font-size: 24px;
+    }
+
+    .page-title p {
+        font-size: 13px;
+    }
+
+    /* 필터 */
+     .community-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .categories a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 86%;
+    }
+
+    /* 카드 1열 */
+    .card-list {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .post-card {
+        padding: 16px;
+    }
+
+    .post-card .title {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 13px;
+    }
+
+}
